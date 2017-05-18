@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+<div class="container">
+ <div class="row">
+  <div class="col-md-9"><img src="app/banner.jpg"></div>
+  <div class="col-md-3"><div class="input-group">
+  <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon2">
+  <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-search"></span></span>
+</div></div>
+ </div>
+  <div class="col-md-12 col-lg-12 col-sm-12">
+  <ul class="list-inline">
+    <li><span class="glyphicon glyphicon-home"></span>&nbsp;<a href="#" (click)="menuClicked('home')">Home</a></li>
+    <li><span class="glyphicon glyphicon-user"></span><a href="#" (click)="menuClicked('about')">About Me</a></li>
+    <li><span class="glyphicon glyphicon-book"></span><a href="#" (click)="menuClicked('qual')">Qualifications</a></li>
+    <li><span class="glyphicon glyphicon-cog"></span><a href="#" (click)="menuClicked('motivation')">Motivation</a></li>
+  </ul>
+  </div>
+
+  <br><br>
+    <div id="anyContent" style="border: 1 px solid black;">
+      <div id="home" *ngIf="homeClicked">
+		<app-home></app-home>
+      </div>
+
+      <div id="about" *ngIf="aboutClicked">
+				<app-about></app-about>
+      </div>
+       <div id="qual" *ngIf="qualClicked">
+				<app-qualifications></app-qualifications>
+      </div>
+       <div id="home" *ngIf="motivationClicked">
+				<app-motivation></app-motivation>
+      </div>
+       
+  </div>
+  <footer>
+		Feedback at::: lp_money@acadgild.com <div style="float:right">(c) Preeti 2017</div>
+		</footer>
+</div>
